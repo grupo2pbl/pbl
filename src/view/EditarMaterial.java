@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package View;
+package view;
 
 import javax.swing.JOptionPane;
 
@@ -12,12 +12,12 @@ import javax.swing.JOptionPane;
  *
  * @author eunice
  */
-public class RegistarMaterial extends javax.swing.JFrame {
+public class EditarMaterial extends javax.swing.JFrame {
 
     /**
      * Creates new form NewJFrame
      */
-    public RegistarMaterial() {
+    public EditarMaterial() {
         initComponents();
     }
 
@@ -43,7 +43,7 @@ public class RegistarMaterial extends javax.swing.JFrame {
         jComboBox4 = new javax.swing.JComboBox();
         jTextField2 = new javax.swing.JTextField();
         botaoRegistar = new javax.swing.JButton();
-        botaoCancelar = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox();
         jPanel2 = new javax.swing.JPanel();
@@ -77,20 +77,16 @@ public class RegistarMaterial extends javax.swing.JFrame {
 
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        botaoRegistar.setText("Registar");
+        botaoRegistar.setText("Salvar Alterações");
+        botaoRegistar.setToolTipText("Salvar Alterações");
         botaoRegistar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoRegistarActionPerformed(evt);
             }
         });
 
-        botaoCancelar.setText("Cancelar");
-        botaoCancelar.setToolTipText("Cancelar");
-        botaoCancelar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoCancelarActionPerformed(evt);
-            }
-        });
+        jButton2.setText("Cancelar");
+        jButton2.setToolTipText("Cancelar");
 
         jLabel2.setText("Responsável");
 
@@ -115,7 +111,7 @@ public class RegistarMaterial extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(botaoRegistar, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(botaoCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,13 +151,13 @@ public class RegistarMaterial extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoRegistar)
-                    .addComponent(botaoCancelar))
+                    .addComponent(jButton2))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(130, 204, 117));
 
-        jLabel1.setText("Registar Material");
+        jLabel1.setText("Editar Material");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -190,7 +186,7 @@ public class RegistarMaterial extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(0, 0, 0)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -213,23 +209,14 @@ public class RegistarMaterial extends javax.swing.JFrame {
 
     private void botaoRegistarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoRegistarActionPerformed
         // TODO add your handling code here:
-        RegistarMaterial rm;
-        int opcao = JOptionPane.showConfirmDialog(rootPane,"Deseja salvar?","Confirmacao" ,JOptionPane.OK_CANCEL_OPTION);
-        if (opcao == JOptionPane.OK_OPTION){
-            JOptionPane.showMessageDialog(rootPane, "Registado com sucesso!","Mensagem de Confirmacao", JOptionPane.INFORMATION_MESSAGE);                    
-        }else
-             rm = new RegistarMaterial();
+        
+       // JOptionPane.showConfirmDialog(rootPane,"Deseja salvar?","Confirmacao" , JOptionPane.INFORMATION_MESSAGE,JOptionPane.YES_NO_OPTION);
+      
     }//GEN-LAST:event_botaoRegistarActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-       
     }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void botaoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCancelarActionPerformed
-        // TODO add your handling code here:
-       dispose();
-    }//GEN-LAST:event_botaoCancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -248,27 +235,27 @@ public class RegistarMaterial extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RegistarMaterial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditarMaterial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RegistarMaterial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditarMaterial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RegistarMaterial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditarMaterial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RegistarMaterial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditarMaterial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RegistarMaterial().setVisible(true);
+                new EditarMaterial().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botaoCancelar;
     private javax.swing.JButton botaoRegistar;
+    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JComboBox jComboBox3;

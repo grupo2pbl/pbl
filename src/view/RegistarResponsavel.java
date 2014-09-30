@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 
-package View;
+package view;
 
-import Controller.CargoController;
-import Controller.ResponsavelController;
+import controller.CargoController;
+import controller.ResponsavelController;
 import Model.Cargo;
 import Model.Responsavel;
 import java.awt.event.ActionEvent;
@@ -112,11 +112,11 @@ public class RegistarResponsavel extends javax.swing.JFrame {
 
         botGravar.setText("Gravar");
         botGravar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                botGravarMousePressed(evt);
-            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botGravarMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                botGravarMousePressed(evt);
             }
         });
         botGravar.addActionListener(new java.awt.event.ActionListener() {

@@ -31,7 +31,7 @@ public class CategoriaMaterialDAO {
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(ResponsavelDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
-         
+    } 
     /**
      *
      * @return

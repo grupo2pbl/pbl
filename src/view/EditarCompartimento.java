@@ -4,20 +4,20 @@
  * and open the template in the editor.
  */
 
-package View;
+package view;
 
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author eunice
+ * @author Eunice Muzime
  */
-public class AdicionarCompartimento extends javax.swing.JFrame {
+public class EditarCompartimento extends javax.swing.JFrame {
 
     /**
-     * Creates new form AdicionarCompartimento
+     * Creates new form EditarCompartimento
      */
-    public AdicionarCompartimento() {
+    public EditarCompartimento() {
         initComponents();
     }
 
@@ -49,7 +49,7 @@ public class AdicionarCompartimento extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(130, 204, 117));
 
-        jLabel1.setText("Adicionar Compartimento");
+        jLabel1.setText("Editar Compartimento");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -99,7 +99,7 @@ public class AdicionarCompartimento extends javax.swing.JFrame {
             }
         });
 
-        botaoRegistar.setText("Registar");
+        botaoRegistar.setText("Salvar Alteracoes");
         botaoRegistar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoRegistarActionPerformed(evt);
@@ -140,7 +140,7 @@ public class AdicionarCompartimento extends javax.swing.JFrame {
                                 .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.LEADING, 0, 191, Short.MAX_VALUE)
                                 .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,7 +161,7 @@ public class AdicionarCompartimento extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoRegistar)
                     .addComponent(botaoCancelar))
@@ -198,6 +198,10 @@ public class AdicionarCompartimento extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+
     private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox3ActionPerformed
@@ -208,22 +212,15 @@ public class AdicionarCompartimento extends javax.swing.JFrame {
 
     private void botaoRegistarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoRegistarActionPerformed
         // TODO add your handling code here:
-         AdicionarCompartimento addComp;
-        int opcao = JOptionPane.showConfirmDialog(rootPane,"Deseja Adicionar Novo Compartimento?","Confirmacao" ,JOptionPane.OK_CANCEL_OPTION);
-        if (opcao == JOptionPane.OK_OPTION){
-            JOptionPane.showMessageDialog(rootPane, "Registado com sucesso!","Mensagem de Confirmacao", JOptionPane.INFORMATION_MESSAGE);                    
-        }else
-             addComp = new AdicionarCompartimento();
+        this.setVisible(false);
+        JOptionPane.showMessageDialog(rootPane, "Registado Com Sucesso","Informação",JOptionPane.INFORMATION_MESSAGE);
+        System.exit(0);
     }//GEN-LAST:event_botaoRegistarActionPerformed
 
     private void botaoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCancelarActionPerformed
         // TODO add your handling code here:
-        dispose();
+        System.exit(0);
     }//GEN-LAST:event_botaoCancelarActionPerformed
-
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -242,20 +239,20 @@ public class AdicionarCompartimento extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AdicionarCompartimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditarCompartimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AdicionarCompartimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditarCompartimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AdicionarCompartimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditarCompartimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AdicionarCompartimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditarCompartimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AdicionarCompartimento().setVisible(true);
+                new EditarCompartimento().setVisible(true);
             }
         });
     }

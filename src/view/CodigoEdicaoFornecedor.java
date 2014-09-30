@@ -4,21 +4,18 @@
  * and open the template in the editor.
  */
 
-package View;
+package view;
 
 /**
  *
  * @author e1000son
  */
-public class CodigoParaEdicao extends javax.swing.JDialog {
+public class CodigoEdicaoFornecedor extends javax.swing.JFrame {
 
     /**
-     * Creates new form Confirmacao
+     * Creates new form CodigoEdicaoFornecedor1
      */
-    public CodigoParaEdicao(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
-        setResizable(false);
-        setLocationRelativeTo(null);
+    public CodigoEdicaoFornecedor() {
         initComponents();
     }
 
@@ -38,7 +35,7 @@ public class CodigoParaEdicao extends javax.swing.JDialog {
         jTextField1 = new javax.swing.JTextField();
         botCancelar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(214, 253, 196));
 
@@ -53,7 +50,7 @@ public class CodigoParaEdicao extends javax.swing.JDialog {
 
         jLabel1.setBackground(new java.awt.Color(130, 204, 117));
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel1.setText("Introduza o codigo do Funcionario:");
+        jLabel1.setText("Introduza o codigo do Fornecedor:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -88,10 +85,10 @@ public class CodigoParaEdicao extends javax.swing.JDialog {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(botContinuar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(botCancelar)))
+                        .addGap(15, 15, 15)
+                        .addComponent(botContinuar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(botCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -122,16 +119,15 @@ public class CodigoParaEdicao extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botContinuarActionPerformed
-    EditarResponsavel ed = new EditarResponsavel();
-    ed.setVisible(true);
-    ed.setLocationRelativeTo(null);
-    //this.setVisible(false);
-    //this.dispose();
+        EditarFornecedor ed = new EditarFornecedor();
+        ed.setVisible(true);
+        ed.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_botContinuarActionPerformed
 
     private void botCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botCancelarActionPerformed
-    setVisible(false);
-    dispose();
+        setVisible(false);
+        dispose();
     }//GEN-LAST:event_botCancelarActionPerformed
 
     /**
@@ -151,27 +147,20 @@ public class CodigoParaEdicao extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CodigoParaEdicao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CodigoEdicaoFornecedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CodigoParaEdicao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CodigoEdicaoFornecedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CodigoParaEdicao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CodigoEdicaoFornecedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CodigoParaEdicao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CodigoEdicaoFornecedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
-        /* Create and display the dialog */
+        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                CodigoParaEdicao dialog = new CodigoParaEdicao(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
+                new CodigoEdicaoFornecedor().setVisible(true);
             }
         });
     }
