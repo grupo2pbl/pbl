@@ -45,9 +45,8 @@ public class CompartimentoDAO {
             stmt.setString(2,compartimento.getDesignacao());
             stmt.setString(3,compartimento.getPiso());
             stmt.setInt(4,compartimento.getIdTipoCompart().getId());
-            stmt.setInt(4,compartimento.getIdResponsavel().getId());         
-            
-            
+            stmt.setInt(5,compartimento.getIdResponsavel().getId());         
+                     
             stmt.execute();
             stmt.close();
         } catch (SQLException ex) {
@@ -56,7 +55,7 @@ public class CompartimentoDAO {
         
     }
     
-     public List<Compartimento> listarTodos(){
+    public List<Compartimento> listarTodos(){
         String sql = "Select * from Compartimento";
         try{ 
         stmt = this.con.prepareStatement(sql);

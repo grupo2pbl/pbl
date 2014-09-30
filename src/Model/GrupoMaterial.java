@@ -12,32 +12,32 @@ package Model;
  */
 public class GrupoMaterial {
     private int id;
-    private String tempo_int;
+    private int tempo_int;
     private String data_aquisicao;
     private String marca;
     private int idFornecedor;
-    private int idMaterial;
+    private int idCategoria;
 
-    public GrupoMaterial(int id, String tempo_int, String data_aquisicao, String marca, int idFornecedor, int idMaterial) {
+    public GrupoMaterial(int id, int tempo_int, String data_aquisicao, String marca, int idFornecedor, int idCategoria) {
         this.id = id;
         this.tempo_int = tempo_int;
         this.data_aquisicao = data_aquisicao;
         this.marca = marca;
         this.idFornecedor = idFornecedor;
-        this.idMaterial = idMaterial;
+        this.idCategoria = idCategoria;
     }
+
+    public GrupoMaterial() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
-     public GrupoMaterial() {
-        
-    }
 
     public int getId() {
         return id;
     }
 
-    public String getTempo_int() {
-        return tempo_int;
-    }
+
 
     public String getData_aquisicao() {
         return data_aquisicao;
@@ -51,15 +51,15 @@ public class GrupoMaterial {
         return idFornecedor;
     }
 
-    public int getIdMaterial() {
-        return idMaterial;
-    }
-
     public void setId(int id) {
         this.id = id;
     }
 
-    public void setTempo_int(String tempo_int) {
+    public int getTempo_int() {
+        return tempo_int;
+    }
+
+    public void setTempo_int(int tempo_int) {
         this.tempo_int = tempo_int;
     }
 
@@ -75,9 +75,11 @@ public class GrupoMaterial {
         this.idFornecedor = idFornecedor;
     }
 
-    public void setIdMaterial(int idMaterial) {
-        this.idMaterial = idMaterial;
+    public int getIdCategoria() {
+        return idCategoria;
     }
 
-    
+    public void setIdCategoria(int idCategoria) {
+        this.idCategoria = idCategoria;
+    }
 }
