@@ -35,7 +35,7 @@ public class CargoDAO {
     
     
     public List<Cargo> listarCargos(){
-        String sql = "select * from cargo";
+        String sql = "select * from Cargo";
         try {
             List<Cargo> lista = new ArrayList<>();
             stmt = this.con.prepareStatement(sql);//Conexao feita

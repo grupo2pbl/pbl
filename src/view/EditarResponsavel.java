@@ -6,7 +6,7 @@
 
 package view;
 
-import View.Confirmacao;
+import view.Confirmacao;
 import java.awt.event.ActionEvent;
 
 /**
