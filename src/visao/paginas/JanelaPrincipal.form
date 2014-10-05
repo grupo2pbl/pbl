@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
     <Container class="javax.swing.JTabbedPane" name="jTabbedPane2">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
     </Container>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup2">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup3">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -119,19 +125,19 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="235" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="390" max="32767" attributes="0"/>
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="472" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="317" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="214" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="322" max="32767" attributes="0"/>
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="383" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="275" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -142,6 +148,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Dialog" size="36" style="1"/>
                     </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="text" type="java.lang.String" value="Gestao de Patrimonio"/>
                   </Properties>
                 </Component>
@@ -385,7 +392,7 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="tabela" max="32767" attributes="0"/>
+                                  <Component id="tabela" pref="982" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -419,38 +426,32 @@
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
                           <SubComponents>
-                            <Container class="javax.swing.JScrollPane" name="tabGrupo">
+                            <Container class="javax.swing.JScrollPane" name="tabUnico">
                               <AuxValues>
                                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                               </AuxValues>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                                  <CardConstraints cardName="card2"/>
+                                  <CardConstraints cardName="card3"/>
                                 </Constraint>
                               </Constraints>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                               <SubComponents>
-                                <Component class="javax.swing.JTable" name="tbG">
+                                <Component class="javax.swing.JTable" name="tbU">
                                   <Properties>
                                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                                      <Table columnCount="7" rowCount="17">
+                                      <Table columnCount="6" rowCount="24">
                                         <Column editable="false" title="Codigo" type="java.lang.String"/>
                                         <Column editable="false" title="Categoria" type="java.lang.String"/>
-                                        <Column editable="false" title="Designacao" type="java.lang.String"/>
-                                        <Column editable="false" title="Fornecedor" type="java.lang.String"/>
-                                        <Column editable="false" title="Quantidade" type="java.lang.String"/>
-                                        <Column editable="false" title="Data de Aquisicao" type="java.lang.Object"/>
-                                        <Column editable="false" title="Preco Total" type="java.lang.String"/>
+                                        <Column editable="false" title="Estado" type="java.lang.String"/>
+                                        <Column editable="false" title="Compartimento" type="java.lang.String"/>
+                                        <Column editable="false" title="Data de Aquisicao" type="java.lang.String"/>
+                                        <Column editable="false" title="Preco" type="java.lang.String"/>
                                       </Table>
                                     </Property>
                                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                                       <TableColumnModel selectionModel="0">
-                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
-                                          <Title/>
-                                          <Editor/>
-                                          <Renderer/>
-                                        </Column>
                                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
                                           <Title/>
                                           <Editor/>
@@ -491,32 +492,38 @@
                                 </Component>
                               </SubComponents>
                             </Container>
-                            <Container class="javax.swing.JScrollPane" name="tabUnico">
+                            <Container class="javax.swing.JScrollPane" name="tabGrupo">
                               <AuxValues>
                                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                               </AuxValues>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                                  <CardConstraints cardName="card3"/>
+                                  <CardConstraints cardName="card2"/>
                                 </Constraint>
                               </Constraints>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                               <SubComponents>
-                                <Component class="javax.swing.JTable" name="tbU">
+                                <Component class="javax.swing.JTable" name="tbG">
                                   <Properties>
                                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                                      <Table columnCount="6" rowCount="24">
+                                      <Table columnCount="7" rowCount="17">
                                         <Column editable="false" title="Codigo" type="java.lang.String"/>
                                         <Column editable="false" title="Categoria" type="java.lang.String"/>
-                                        <Column editable="false" title="Estado" type="java.lang.String"/>
-                                        <Column editable="false" title="Compartimento" type="java.lang.String"/>
-                                        <Column editable="false" title="Data de Aquisicao" type="java.lang.String"/>
-                                        <Column editable="false" title="Preco" type="java.lang.String"/>
+                                        <Column editable="false" title="Designacao" type="java.lang.String"/>
+                                        <Column editable="false" title="Fornecedor" type="java.lang.String"/>
+                                        <Column editable="false" title="Quantidade" type="java.lang.String"/>
+                                        <Column editable="false" title="Data de Aquisicao" type="java.lang.Object"/>
+                                        <Column editable="false" title="Preco Total" type="java.lang.String"/>
                                       </Table>
                                     </Property>
                                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                                       <TableColumnModel selectionModel="0">
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
                                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
                                           <Title/>
                                           <Editor/>
@@ -620,40 +627,44 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="voltar" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace pref="328" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
+                              <Component id="formAddMaterial" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="voltar" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jPanel3" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="formAddMaterial" alignment="1" pref="153" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JButton" name="voltar">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Voltar"/>
-                      </Properties>
-                    </Component>
-                    <Container class="javax.swing.JPanel" name="jPanel3">
+                    <Container class="javax.swing.JPanel" name="formAddMaterial">
 
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel2" min="-2" pref="247" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="560" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jLabel2" min="-2" pref="373" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jLabel4" min="-2" pref="407" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Component id="jPanel5" pref="889" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -662,7 +673,13 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="551" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jPanel5" min="-2" pref="527" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -671,11 +688,73 @@
                         <Component class="javax.swing.JLabel" name="jLabel2">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Dialog" size="18" style="1"/>
+                              <Font name="Dialog" size="24" style="1"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Registar Novo Material"/>
+                            <Property name="text" type="java.lang.String" value="Cadastrar Novo Material"/>
                           </Properties>
                         </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel4">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Nota: Porfavor preencha correctamente o formulario"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel5">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Os campos marcados com * sao Obrigatorios."/>
+                          </Properties>
+                        </Component>
+                        <Container class="javax.swing.JPanel" name="jPanel5">
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                            <Property name="useNullLayout" type="boolean" value="false"/>
+                          </Layout>
+                          <SubComponents>
+                            <Component class="javax.swing.JLabel" name="jLabel7">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Dialog" size="14" style="1"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="1 de 2 Passos"/>
+                              </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="10" y="10" width="120" height="30"/>
+                                </Constraint>
+                              </Constraints>
+                            </Component>
+                            <Container class="javax.swing.JPanel" name="formBase">
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="10" y="50" width="870" height="470"/>
+                                </Constraint>
+                              </Constraints>
+
+                              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
+                              <SubComponents>
+                                <Container class="javax.swing.JPanel" name="passo1M">
+                                  <Constraints>
+                                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                                      <CardConstraints cardName="card2"/>
+                                    </Constraint>
+                                  </Constraints>
+
+                                  <Layout>
+                                    <DimensionLayout dim="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                    </DimensionLayout>
+                                    <DimensionLayout dim="1">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                    </DimensionLayout>
+                                  </Layout>
+                                </Container>
+                              </SubComponents>
+                            </Container>
+                          </SubComponents>
+                        </Container>
                       </SubComponents>
                     </Container>
                   </SubComponents>

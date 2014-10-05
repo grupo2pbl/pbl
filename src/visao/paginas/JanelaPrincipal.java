@@ -20,6 +20,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     public JanelaPrincipal() {
         initComponents();
         setVisible(true);
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -32,6 +33,9 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane2 = new javax.swing.JTabbedPane();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
         basePrincipal = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -56,17 +60,22 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         tabela = new javax.swing.JPanel();
-        tabGrupo = new javax.swing.JScrollPane();
-        tbG = new javax.swing.JTable();
         tabUnico = new javax.swing.JScrollPane();
         tbU = new javax.swing.JTable();
+        tabGrupo = new javax.swing.JScrollPane();
+        tbG = new javax.swing.JTable();
         jNovoMaterial = new javax.swing.JButton();
         materialUnico = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         registaMaterial = new javax.swing.JPanel();
-        voltar = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
+        formAddMaterial = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        formBase = new javax.swing.JPanel();
+        passo1M = new javax.swing.JPanel();
         compart = new javax.swing.JPanel();
         responsavel = new javax.swing.JPanel();
         config = new javax.swing.JPanel();
@@ -100,23 +109,24 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         Tabbedprincipal.setToolTipText("");
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Gestao de Patrimonio");
 
         javax.swing.GroupLayout inicioLayout = new javax.swing.GroupLayout(inicio);
         inicio.setLayout(inicioLayout);
         inicioLayout.setHorizontalGroup(
             inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(inicioLayout.createSequentialGroup()
-                .addGap(235, 235, 235)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inicioLayout.createSequentialGroup()
+                .addContainerGap(390, Short.MAX_VALUE)
                 .addComponent(jLabel3)
-                .addContainerGap(472, Short.MAX_VALUE))
+                .addGap(317, 317, 317))
         );
         inicioLayout.setVerticalGroup(
             inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(inicioLayout.createSequentialGroup()
-                .addGap(214, 214, 214)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inicioLayout.createSequentialGroup()
+                .addContainerGap(322, Short.MAX_VALUE)
                 .addComponent(jLabel3)
-                .addContainerGap(383, Short.MAX_VALUE))
+                .addGap(275, 275, 275))
         );
 
         Tabbedprincipal.addTab("Inicio", inicio);
@@ -226,59 +236,6 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         tabela.setLayout(new java.awt.CardLayout());
 
-        tbG.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Codigo", "Categoria", "Designacao", "Fornecedor", "Quantidade", "Data de Aquisicao", "Preco Total"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        tbG.setRowHeight(25);
-        tabGrupo.setViewportView(tbG);
-        if (tbG.getColumnModel().getColumnCount() > 0) {
-            tbG.getColumnModel().getColumn(0).setResizable(false);
-            tbG.getColumnModel().getColumn(1).setResizable(false);
-            tbG.getColumnModel().getColumn(2).setResizable(false);
-            tbG.getColumnModel().getColumn(3).setResizable(false);
-            tbG.getColumnModel().getColumn(4).setResizable(false);
-            tbG.getColumnModel().getColumn(5).setResizable(false);
-            tbG.getColumnModel().getColumn(6).setResizable(false);
-        }
-
-        tabela.add(tabGrupo, "card2");
-
         tbU.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -338,6 +295,59 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         tabela.add(tabUnico, "card3");
 
+        tbG.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Codigo", "Categoria", "Designacao", "Fornecedor", "Quantidade", "Data de Aquisicao", "Preco Total"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tbG.setRowHeight(25);
+        tabGrupo.setViewportView(tbG);
+        if (tbG.getColumnModel().getColumnCount() > 0) {
+            tbG.getColumnModel().getColumn(0).setResizable(false);
+            tbG.getColumnModel().getColumn(1).setResizable(false);
+            tbG.getColumnModel().getColumn(2).setResizable(false);
+            tbG.getColumnModel().getColumn(3).setResizable(false);
+            tbG.getColumnModel().getColumn(4).setResizable(false);
+            tbG.getColumnModel().getColumn(5).setResizable(false);
+            tbG.getColumnModel().getColumn(6).setResizable(false);
+        }
+
+        tabela.add(tabGrupo, "card2");
+
         javax.swing.GroupLayout tbGrupoLayout = new javax.swing.GroupLayout(tbGrupo);
         tbGrupo.setLayout(tbGrupoLayout);
         tbGrupoLayout.setHorizontalGroup(
@@ -350,7 +360,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(tbGrupoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tabela, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(tabela, javax.swing.GroupLayout.DEFAULT_SIZE, 982, Short.MAX_VALUE))
         );
         tbGrupoLayout.setVerticalGroup(
             tbGrupoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -429,25 +439,68 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         material.add(materialUnico, "card3");
 
-        voltar.setText("Voltar");
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel2.setText("Cadastrar Novo Material");
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel2.setText("Registar Novo Material");
+        jLabel4.setText("Nota: Porfavor preencha correctamente o formulario");
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 560, Short.MAX_VALUE))
+        jLabel5.setText("Os campos marcados com * sao Obrigatorios.");
+
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel7.setText("1 de 2 Passos");
+        jPanel5.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 30));
+
+        formBase.setLayout(new java.awt.CardLayout());
+
+        javax.swing.GroupLayout passo1MLayout = new javax.swing.GroupLayout(passo1M);
+        passo1M.setLayout(passo1MLayout);
+        passo1MLayout.setHorizontalGroup(
+            passo1MLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        passo1MLayout.setVerticalGroup(
+            passo1MLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        formBase.add(passo1M, "card2");
+
+        jPanel5.add(formBase, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 870, 470));
+
+        javax.swing.GroupLayout formAddMaterialLayout = new javax.swing.GroupLayout(formAddMaterial);
+        formAddMaterial.setLayout(formAddMaterialLayout);
+        formAddMaterialLayout.setHorizontalGroup(
+            formAddMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(formAddMaterialLayout.createSequentialGroup()
+                .addGroup(formAddMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(formAddMaterialLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(formAddMaterialLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(formAddMaterialLayout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(jLabel5)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(formAddMaterialLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 889, Short.MAX_VALUE))
+        );
+        formAddMaterialLayout.setVerticalGroup(
+            formAddMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(formAddMaterialLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addContainerGap(551, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout registaMaterialLayout = new javax.swing.GroupLayout(registaMaterial);
@@ -455,19 +508,13 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         registaMaterialLayout.setHorizontalGroup(
             registaMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(registaMaterialLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(registaMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(voltar))
-                .addContainerGap(328, Short.MAX_VALUE))
+                .addGap(102, 102, 102)
+                .addComponent(formAddMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         registaMaterialLayout.setVerticalGroup(
             registaMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(registaMaterialLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(voltar)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(formAddMaterial, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
         );
 
         material.add(registaMaterial, "card4");
@@ -598,8 +645,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jcompartActionPerformed
 
     private void jNovoMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNovoMaterialActionPerformed
-        //RegistarMaterial rg = new RegistarMaterial();
-        trocaContainer(materialHome, registaMaterial);
+        trocaContainer(material, registaMaterial);
     }//GEN-LAST:event_jNovoMaterialActionPerformed
 
     public void trocaContainer(Container base, Container novo){
@@ -615,9 +661,14 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JTabbedPane Tabbedprincipal;
     private javax.swing.JPanel ajuda;
     private javax.swing.JPanel basePrincipal;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JPanel compart;
     private javax.swing.JPanel config;
     private javax.swing.JPanel filtroMaterial;
+    private javax.swing.JPanel formAddMaterial;
+    private javax.swing.JPanel formBase;
     private javax.swing.JPanel inicio;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -628,13 +679,16 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JButton jNovoMaterial;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JComboBox jcategoria;
@@ -643,6 +697,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel material;
     private javax.swing.JPanel materialHome;
     private javax.swing.JPanel materialUnico;
+    private javax.swing.JPanel passo1M;
     private javax.swing.JPanel registaMaterial;
     private javax.swing.JPanel responsavel;
     private javax.swing.JScrollPane tabGrupo;
@@ -652,6 +707,5 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel tbGrupo;
     private javax.swing.JTable tbU;
     private javax.swing.JComboBox tipoLista;
-    private javax.swing.JButton voltar;
     // End of variables declaration//GEN-END:variables
 }
