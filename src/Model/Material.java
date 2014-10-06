@@ -14,18 +14,20 @@ public class Material {
     private int id;
     private char estado;
     private char estado_Chegada;
-    private int idCompartimento;
-    private int idGrupoMaterial;
+    private int compartimento_ID;
+    private int grupoMaterial_ID;
 
-    public Material() {
-    }
+   
+    
 
-    public Material(int id, char estado, char estado_Chegada, int idCompartimento, int idGrupoMaterial) {
+    public Material(int id, char estado, char estado_Chegada, int compartimento_ID, int grupoMaterial_ID) {
         this.id = id;
         this.estado = estado;
         this.estado_Chegada = estado_Chegada;
-        this.idCompartimento = idCompartimento;
-        this.idGrupoMaterial = idGrupoMaterial;
+        this.compartimento_ID = compartimento_ID;
+        this.grupoMaterial_ID = grupoMaterial_ID;
+    }
+    public Material() {
     }
 
     public int getId() {
@@ -53,19 +55,19 @@ public class Material {
     }
 
     public int getIdCompartimento() {
-        return idCompartimento;
+        return compartimento_ID;
     }
 
-    public void setIdCompartimento(int idCompartimento) {
-        this.idCompartimento = idCompartimento;
+    public void setIdCompartimento(int compartimento_ID) {
+        this.compartimento_ID = compartimento_ID;
     }
 
     public int getIdGrupoMaterial() {
-        return idGrupoMaterial;
+        return grupoMaterial_ID;
     }
 
-    public void setIdGrupoMaterial(int idGrupoMaterial) {
-        this.idGrupoMaterial = idGrupoMaterial;
+    public void setIdGrupoMaterial(int grupoMaterial_ID) {
+        this.grupoMaterial_ID = grupoMaterial_ID;
     }
 
     

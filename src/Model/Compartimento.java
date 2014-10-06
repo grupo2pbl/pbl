@@ -14,17 +14,15 @@ public class Compartimento {
     private int id;
     private String designacao;
     private String piso;
-   // private int idTipoCompart;
-  //  private int idResponsavel;
-    private Model.TipoCompartimento idTipoCompart;
-    private Responsavel idResponsavel;
+    private Model.TipoCompartimento tipoCompart_ID;
+    private Responsavel responsavel_ID;
 
-    public Compartimento(int id, String designacao, String piso,TipoCompartimento idTipoCompart,Responsavel  idResponsavel) {
+    public Compartimento(int id, String designacao, String piso,TipoCompartimento tipoCompart_ID,Responsavel  responsavel_ID) {
         this.id = id;
         this.designacao = designacao;
         this.piso = piso;
-        this.idTipoCompart = idTipoCompart;
-        this.idResponsavel = idResponsavel;
+        this.tipoCompart_ID = tipoCompart_ID;
+        this.responsavel_ID = responsavel_ID;
     }
 
     public Compartimento(){
@@ -44,11 +42,11 @@ public class Compartimento {
     }
 
     public TipoCompartimento getIdTipoCompart() {
-        return idTipoCompart;
+        return tipoCompart_ID;
     }
 
     public Responsavel getIdResponsavel() {
-        return idResponsavel;
+        return responsavel_ID;
     }
 
     public void setId(int id) {
@@ -64,11 +62,11 @@ public class Compartimento {
     }
 
     public void setIdTipoCompart(TipoCompartimento idTipoCompart) {
-        this.idTipoCompart = idTipoCompart;
+        this.tipoCompart_ID = tipoCompart_ID;
     }
 
     public void setIdResponsavel(Responsavel idResponsavel) {
-        this.idResponsavel = idResponsavel;
+        this.responsavel_ID = responsavel_ID;
     }
     
 }

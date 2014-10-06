@@ -12,74 +12,104 @@ package Model;
  */
 public class GrupoMaterial {
     private int id;
-    private int tempo_int;
-    private String data_aquisicao;
-    private String marca;
-    private int idFornecedor;
-    private int idCategoria;
+    private int tempo_Vida;
+    private int CategoriaMaterial_ID;
+    private String modelo;
+    private String cor;
+    private double altura;
+    private double comprimento;
+    private double profundidade;
+    private double peso;
 
-    public GrupoMaterial(int id, int tempo_int, String data_aquisicao, String marca, int idFornecedor, int idCategoria) {
+    public GrupoMaterial(int id, int tempo_Vida, int CategoriaMaterial_ID, String modelo, String cor, double altura, double comprimento, double profundidade, double peso) {
         this.id = id;
-        this.tempo_int = tempo_int;
-        this.data_aquisicao = data_aquisicao;
-        this.marca = marca;
-        this.idFornecedor = idFornecedor;
-        this.idCategoria = idCategoria;
+        this.tempo_Vida = tempo_Vida;
+        this.CategoriaMaterial_ID = CategoriaMaterial_ID;
+        this.modelo = modelo;
+        this.cor = cor;
+        this.altura = altura;
+        this.comprimento = comprimento;
+        this.profundidade = profundidade;
+        this.peso = peso;
     }
 
     public GrupoMaterial() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
     
 
     public int getId() {
         return id;
     }
 
-
-
-    public String getData_aquisicao() {
-        return data_aquisicao;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public int getIdFornecedor() {
-        return idFornecedor;
-    }
-
     public void setId(int id) {
         this.id = id;
     }
 
-    public int getTempo_int() {
-        return tempo_int;
+    public int getTempo_Vida() {
+        return tempo_Vida;
     }
 
-    public void setTempo_int(int tempo_int) {
-        this.tempo_int = tempo_int;
+    public void setTempo_Vida(int tempo_Vida) {
+        this.tempo_Vida = tempo_Vida;
     }
 
-    public void setData_aquisicao(String data_aquisicao) {
-        this.data_aquisicao = data_aquisicao;
+    public int getCategoriaMaterial_ID() {
+        return CategoriaMaterial_ID;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public void setCategoriaMaterial_ID(int CategoriaMaterial_ID) {
+        this.CategoriaMaterial_ID = CategoriaMaterial_ID;
     }
 
-    public void setIdFornecedor(int idFornecedor) {
-        this.idFornecedor = idFornecedor;
+    
+
+    public String getModelo() {
+        return modelo;
     }
 
-    public int getIdCategoria() {
-        return idCategoria;
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
-    public void setIdCategoria(int idCategoria) {
-        this.idCategoria = idCategoria;
+    public String getCor() {
+        return cor;
     }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    public double getComprimento() {
+        return comprimento;
+    }
+
+    public void setComprimento(double comprimento) {
+        this.comprimento = comprimento;
+    }
+
+    public double getProfundidade() {
+        return profundidade;
+    }
+
+    public void setProfundidade(double profundidade) {
+        this.profundidade = profundidade;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+    
+    
 }

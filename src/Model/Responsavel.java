@@ -14,11 +14,10 @@ public class Responsavel {
     private int id;
     private String apelido;
     private String outrosNomes;
-    //private int Cargo_idCargo;
     private Cargo cargo_idCargo;
-    
-    public Responsavel(String apelido, String outrosNomes, Cargo cargo_idCargo) {
-        //this.id = id;
+
+    public Responsavel(int id, String apelido, String outrosNomes, Cargo cargo_idCargo) {
+        this.id = id;
         this.apelido = apelido;
         this.outrosNomes = outrosNomes;
         this.cargo_idCargo = cargo_idCargo;

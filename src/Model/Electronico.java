@@ -12,12 +12,12 @@ package Model;
  */
 public class Electronico {
     private int id;
-    private int idMaterial;
+    private int material_ID;
     private double energia;
 
-    public Electronico(int id, int idMaterial, double energia) {
+    public Electronico(int id, int material_ID, double energia) {
         this.id = id;
-        this.idMaterial = idMaterial;
+        this.material_ID = material_ID;
         this.energia = energia;
     }
     
@@ -30,7 +30,7 @@ public class Electronico {
     }
 
     public int getIdMaterial() {
-        return idMaterial;
+        return material_ID;
     }
 
     public double getEnergia() {
@@ -41,8 +41,8 @@ public class Electronico {
         this.id = id;
     }
 
-    public void setIdMaterial(int idMaterial) {
-        this.idMaterial = idMaterial;
+    public void setIdMaterial(int material_ID) {
+        this.material_ID = material_ID;
     }
 
     public void setEnergia(double energia) {

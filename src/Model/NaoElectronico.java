@@ -12,11 +12,11 @@ package Model;
  */
 public class NaoElectronico {
     private int id;
-    private int idMaterial;
+    private int material_ID;
 
-    public NaoElectronico(int id, int idMaterial) {
+    public NaoElectronico(int id, int material_ID) {
         this.id = id;
-        this.idMaterial = idMaterial;
+        this.material_ID = material_ID;
     }
 
      public NaoElectronico() {
@@ -28,15 +28,15 @@ public class NaoElectronico {
     }
 
     public int getIdMaterial() {
-        return idMaterial;
+        return material_ID;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public void setIdMaterial(int idMaterial) {
-        this.idMaterial = idMaterial;
+    public void setIdMaterial(int material_ID) {
+        this.material_ID = material_ID;
     }
    
        
